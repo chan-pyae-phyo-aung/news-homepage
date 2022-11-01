@@ -1,0 +1,26 @@
+{
+  "name": "news-homepage",
+  "version": "1.0.0",
+  "description": "A News Homepage (Challenge From Frontend Mentor)",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/styles.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chanpyaephyoaung/news-homepage.git"
+  },
+  "keywords": [
+    "news",
+    "homepage"
+  ],
+  "author": "Chan Pyae",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chanpyaephyoaung/news-homepage/issues"
+  },
+  "homepage": "https://github.com/chanpyaephyoaung/news-homepage#readme",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}
