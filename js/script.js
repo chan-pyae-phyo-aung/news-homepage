@@ -7,7 +7,14 @@ const overlay = document.querySelector(".overlay");
 // Toggle Side Navigation
 navHiddenCheckbox.addEventListener("change", function () {
   sideNav.classList.toggle("hidden");
-  // setTimeout(() =>, 150);
   overlay.classList.toggle("hidden");
   document.body.classList.toggle("disable-scroll");
+});
+
+// Close Side Navigation if overlay is touched
+overlay.addEventListener("click", function () {
+  sideNav.classList.add("hidden");
+  overlay.classList.add("hidden");
+  document.body.classList.remove("disable-scroll");
+  navHiddenCheckbox.checked = false;
 });
