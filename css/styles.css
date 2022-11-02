@@ -10,6 +10,11 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   font-family: "Inter", sans-serif;
@@ -35,10 +40,20 @@ a, a:link, a:visited {
   max-width: 110rem;
   margin: 5rem 3rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .main {
+    margin: 4rem 5rem;
+  }
+}
 
 section {
   width: 100%;
   margin-top: 6rem;
+}
+@media only screen and (max-width: 56.25em) {
+  section {
+    margin-top: 5rem;
+  }
 }
 
 .overlay {
@@ -64,19 +79,62 @@ section {
   overflow-x: hidden;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .nav {
+    --side-nav-width: 75%;
+    width: var(--side-nav-width);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fffdfa;
+    z-index: 100;
+    transition: all 0.4s;
+  }
+  .nav.hidden {
+    opacity: 0.4;
+    right: calc(var(--side-nav-width) * -1);
+  }
+}
 .nav__list {
   list-style: none;
   display: flex;
   align-items: center;
 }
+@media only screen and (max-width: 37.5em) {
+  .nav__list {
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 16%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .nav__item {
+    width: 100%;
+    padding: 2rem;
+    padding-left: 4rem;
+  }
+}
 .nav__item:not(:first-child) {
   margin-left: 4rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .nav__item:not(:first-child) {
+    margin-left: 0;
+  }
 }
 .nav__link:link, .nav__link:visited {
   display: inline-block;
   font-size: 1.5rem;
   text-decoration: none;
   color: #5d5f79;
+}
+@media only screen and (max-width: 37.5em) {
+  .nav__link:link, .nav__link:visited {
+    font-size: 2.7rem;
+    color: #00001a;
+  }
 }
 .nav__link:hover, .nav__link:active {
   color: #f15e50;
@@ -86,6 +144,13 @@ section {
   display: none;
   width: 6rem;
   height: 6rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .menu__toggle-container {
+    display: block;
+    position: relative;
+    z-index: 1000;
+  }
 }
 .menu__checkbox {
   display: none;
@@ -138,9 +203,19 @@ section {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 56.25em) {
+  .section-intro {
+    flex-direction: column;
+  }
+}
 
 .intro {
   width: 64%;
+}
+@media only screen and (max-width: 56.25em) {
+  .intro {
+    width: 100%;
+  }
 }
 .intro__img-container {
   width: 100%;
@@ -155,11 +230,29 @@ section {
   justify-content: space-between;
   align-items: center;
 }
+@media only screen and (max-width: 37.5em) {
+  .intro__desc-container {
+    flex-direction: column;
+  }
+}
 .intro__desc-container > h1:first-child {
   width: 45%;
 }
+@media only screen and (max-width: 37.5em) {
+  .intro__desc-container > h1:first-child {
+    width: 100%;
+    text-align: center;
+  }
+}
 .intro__desc {
   width: 50%;
+}
+@media only screen and (max-width: 37.5em) {
+  .intro__desc {
+    margin-top: 3rem;
+    width: 100%;
+    text-align: center;
+  }
 }
 .intro__desc > p:first-child {
   margin-bottom: 3.5rem;
@@ -172,6 +265,12 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media only screen and (max-width: 56.25em) {
+  .new {
+    margin-top: 6rem;
+    width: 100%;
+  }
 }
 .new__news {
   padding: 2.5rem 0;
@@ -193,10 +292,26 @@ section {
   flex-wrap: wrap;
   row-gap: 3rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .section-article {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
 
 .article-container {
   width: 31%;
   display: flex;
+}
+@media only screen and (max-width: 56.25em) {
+  .article-container {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .article-container {
+    width: 100%;
+  }
 }
 .article__thumbnail {
   width: 10rem;
@@ -219,6 +334,11 @@ section {
 .footer {
   width: 100%;
   margin-top: 6rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .footer {
+    margin-top: 5rem;
+  }
 }
 .footer__note {
   color: #5d5f79;

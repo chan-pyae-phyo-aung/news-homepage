@@ -7,3 +7,18 @@ $color-white: #fffdfa;
 $color-grayish-blue: #c5c6ce;
 $color-dark-grayish-blue: #5d5f79;
 $color-darker-grayish-blue: #00001a;
+
+// Media Query Manager
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+}

@@ -29,15 +29,48 @@
 // Navigation
 
 .nav {
+  @include respond("phone") {
+    --side-nav-width: 75%;
+    width: var(--side-nav-width);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: $color-white;
+    z-index: 100;
+    transition: all 0.4s;
+
+    &.hidden {
+      opacity: 0.4;
+      right: calc(var(--side-nav-width) * -1);
+    }
+  }
+
   &__list {
     list-style: none;
     display: flex;
     align-items: center;
+
+    @include respond("phone") {
+      width: 100%;
+      flex-direction: column;
+      position: absolute;
+      top: 16%;
+    }
   }
 
   &__item {
+    @include respond("phone") {
+      width: 100%;
+      padding: 2rem;
+      padding-left: 4rem;
+    }
     &:not(:first-child) {
       margin-left: 4rem;
+
+      @include respond("phone") {
+        margin-left: 0;
+      }
     }
   }
 
@@ -48,6 +81,11 @@
       font-size: 1.5rem;
       text-decoration: none;
       color: $color-dark-grayish-blue;
+
+      @include respond("phone") {
+        font-size: 2.7rem;
+        color: $color-darker-grayish-blue;
+      }
     }
 
     &:hover,
@@ -62,6 +100,12 @@
     display: none; // hide at least in tab-port
     width: 6rem;
     height: 6rem;
+
+    @include respond("phone") {
+      display: block;
+      position: relative;
+      z-index: 1000;
+    }
   }
 
   &__checkbox {
@@ -130,10 +174,18 @@
 .section-intro {
   display: flex;
   justify-content: space-between;
+
+  @include respond("tab-port") {
+    flex-direction: column;
+  }
 }
 
 .intro {
   width: 64%;
+
+  @include respond("tab-port") {
+    width: 100%;
+  }
 
   &__img-container {
     width: 100%;
@@ -150,13 +202,28 @@
     justify-content: space-between;
     align-items: center;
 
+    @include respond("phone") {
+      flex-direction: column;
+    }
+
     & > h1:first-child {
       width: 45%;
+
+      @include respond("phone") {
+        width: 100%;
+        text-align: center;
+      }
     }
   }
 
   &__desc {
     width: 50%;
+
+    @include respond("phone") {
+      margin-top: 3rem;
+      width: 100%;
+      text-align: center;
+    }
 
     & > p:first-child {
       margin-bottom: 3.5rem;
@@ -171,6 +238,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @include respond("tab-port") {
+    margin-top: 6rem;
+    width: 100%;
+  }
 
   &__news {
     padding: 2.5rem 0;
@@ -196,12 +268,25 @@
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 3rem;
+
+  @include respond("phone") {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
 }
 
 .article {
   &-container {
     width: 31%;
     display: flex;
+
+    @include respond("tab-port") {
+      width: 45%;
+    }
+
+    @include respond("phone") {
+      width: 100%;
+    }
   }
 
   &__thumbnail {
@@ -228,6 +313,10 @@
 .footer {
   width: 100%;
   margin-top: 6rem;
+
+  @include respond("tab-port") {
+    margin-top: 5rem;
+  }
 
   &__note {
     color: $color-dark-grayish-blue;
