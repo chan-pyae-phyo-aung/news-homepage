@@ -25,96 +25,112 @@
 </head>
 
 <body>
+  <div class="overlay hidden"></div>
+  <main class="main">
+    <header class="header">
+      <img src="img/logo.svg" alt="logo">
 
-  <header class="header">
-    <img src="img/logo.svg" alt="logo">
-
-    <div class="menu__toggle__container">
-      <input type="checkbox" class="menu__checkbox" id="menu-toggle">
-      <label for="menu-toggle" class="menu__button">
-        <span class="menu__icon"></span>
-      </label>
-    </div>
-
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">New</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Popular</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Trending</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Categories</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="section-intro">
-    <div class="intro">
-      <div class="intro__img-container">
-        <img src="img/image-web-3-desktop.jpg" alt="web-3" class="intro__img">
+      <div class="menu__toggle-container">
+        <input type="checkbox" class="menu__checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu__button">
+          <span class="menu__icon"></span>
+        </label>
       </div>
 
-      <div class="intro__desc-container">
-        <h1 class="heading--primary">The Bright Future of Web 3.0?</h1>
-        <div class="intro__desc">
-          <p class="paragraph">We dive into the next evolution of the web that claims to put the power of the platforms
-            back into the hands of the people.But is it really fulfilling its promises?</p>
-          <a href="#" class="btn btn--red">Read more</a>
+      <nav class="nav hidden">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">New</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Popular</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Trending</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Categories</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="section-intro">
+      <div class="intro">
+        <picture class="intro__img-container">
+          <source media="(min-width:600px)" srcset="img/image-web-3-desktop.jpg">
+          <img src="img/image-web-3-mobile.jpg" alt="web-3" class="intro__img">
+        </picture>
+
+        <div class="intro__desc-container">
+          <h1 class="heading--primary">The Bright Future of Web 3.0?</h1>
+          <div class="intro__desc">
+            <p class="paragraph">We dive into the next evolution of the web that claims to put the power of the
+              platforms
+              back into the hands of the people.But is it really fulfilling its promises?</p>
+            <a href="#" class="btn btn--red">Read more</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <aside class="new">
-      <h1 class="heading--primary heading--orange">New</h1>
-      <div class="new__news">
-        <h3 class="heading--tertiary">Hydrogen VS Electric Cars</h3>
-        <p class="paragraph">Will hydrogen-fueled cars ever catch up to EVs?</p>
+      <aside class="new">
+        <h1 class="heading--secondary heading--orange">New</h1>
+        <div class="new_news-container">
+          <div class="new__news">
+            <a href="#" class="heading--tertiary heading--white">Hydrogen VS Electric Cars</a>
+            <p class="paragraph paragraph--white">Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </div>
+
+          <div class="new__news">
+            <a href="#" class="heading--tertiary heading--white">The Downsides of AI Artistry</a>
+            <p class="paragraph paragraph--white">What are the possible adverse effects of on-demand AI Image
+              generation?
+            </p>
+          </div>
+
+          <div class="new__news">
+            <a href="#" class="heading--tertiary heading--white">Is VC Funding Drying Up?</a>
+            <p class="paragraph paragraph--white">Private funding by VC firms is down 50% YOY. We take a look at what
+              that
+              means.</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section-article">
+
+      <div class="article-container">
+        <img src="img/image-retro-pcs.jpg" alt="retro pcs" class="article__thumbnail">
+
+        <div class="article__desc">
+          <span class="article__number">01</span>
+          <a href="#" class="heading--tertiary heading--black">Reviving Retro PC</a>
+          <p class="paragraph">What happens when old PCs are given modern upgrades?</p>
+        </div>
       </div>
 
-      <div class="new__news">
-        <h3 class="heading--tertiary">The Downsides of AI Artistry</h3>
-        <p class="paragraph">What are the possible adverse effects of on-demand AI Image generation?</p>
+      <div class="article-container">
+        <img src="img/image-top-laptops.jpg" alt="top laptops" class="article__thumbnail">
+
+        <div class="article__desc">
+          <span class="article__number">02</span>
+          <a href="#" class="heading--tertiary heading--black">Top 10 Laptops of 2022</a>
+          <p class="paragraph">Our best picks for various needs and budgets.</p>
+        </div>
       </div>
 
-      <div class="new__news">
-        <h3 class="heading--tertiary heading--white">Is VC Funding Drying Up?</h3>
-        <p class="paragraph">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      <div class="article-container">
+        <img src="img/image-gaming-growth.jpg" alt="gaming controller" class="article__thumbnail">
+
+        <div class="article__desc">
+          <span class="article__number">03</span>
+          <a href="#" class="heading--tertiary heading--black">The Growth of Gaming</a>
+          <p class="paragraph">How the pandemic has sparked fresh opportunities.</p>
+        </div>
       </div>
-    </aside>
-  </section>
+    </section>
 
-  <section class="section-article">
-
-    <div class="article-container">
-      <img src="img/image-retro-pcs.jpg" alt="retro pcs" class="article__thumbnail">
-
-      <div class="article__desc">
-        <span class="article__number">01</span>
-        <div class="h3 heading--tertiary heading--black">Reviving Retro PC</div>
-        <p class="paragraph">What happens when old PCs are given modern upgrades?</p>
-      </div>
-    </div>
-
-    <div class="article-container">
-      <img src="img/image-top-laptops.jpg" alt="top laptops" class="article__thumbnail">
-
-      <div class="article__desc">
-        <span class="article__number">02</span>
-        <div class="h3 heading--tertiary heading--black">Top 10 Laptops of 2022</div>
-        <p class="paragraph">Our best picks for various needs and budgets.</p>
-      </div>
-    </div>
-
-    <div class="article-container">
-      <img src="img/image-gaming-growth.jpg" alt="gaming controller" class="article__thumbnail">
-
-      <div class="article__desc">
-        <span class="article__number">03</span>
-        <div class="h3 heading--tertiary heading--black">The Growth of Gaming</div>
-        <p class="paragraph">How the pandemic has sparked fresh opportunities.</p>
-      </div>
-    </div>
-  </section>
-
+    <footer class="footer">
+      <p class="footer__note">Challenge by <a class="footer__link" target="_blank"
+          href="https://www.frontendmentor.io/">Frontend
+          Mentor</a>. Coded by
+        <a class="footer__link" target="_blank" href="https://github.com/chanpyaephyoaung">cppa-visit</a>.</p>
+    </footer>
+  </main>
 </body>
 
 </html>
