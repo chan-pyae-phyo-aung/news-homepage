@@ -13,4 +13,35 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  background-color: $color-white;
+
+  &.disable-scroll {
+    overflow: hidden;
+  }
+}
+
+a {
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+}
+
+.main {
+  max-width: 110rem;
+  margin: 5rem 3rem;
+}
+
+section {
+  width: 100%;
+  margin-top: 6rem;
 }

@@ -1,0 +1,251 @@
+// Overlay
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(#000, 0.4);
+  --webkit-backdrop-filter: blur(1.5px);
+  backdrop-filter: blur(1.5px);
+  z-index: 5;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+// Header
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+// Navigation
+
+.nav {
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: 4rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: $color-dark-grayish-blue;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary-red;
+    }
+  }
+}
+
+.menu {
+  &__toggle-container {
+    display: none; // hide at least in tab-port
+    width: 6rem;
+    height: 6rem;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    --bar-width: 5rem;
+    --bar-height: 0.33rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__icon {
+    position: relative;
+
+    &,
+    &::before,
+    &::after {
+      width: var(--bar-width);
+      height: var(--bar-height);
+      border-radius: 2px;
+      background-color: $color-darker-grayish-blue;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      transition: all 0.3s;
+    }
+
+    &::before {
+      top: -1.15rem;
+      left: 0;
+    }
+
+    &::after {
+      bottom: -1.15rem;
+      left: 0;
+    }
+  }
+
+  // Animation effect from hamburger to a close shape
+  &__checkbox:checked + &__button &__icon:before {
+    transform: rotate(135deg);
+    top: 0;
+  }
+
+  &__checkbox:checked + &__button &__icon:after {
+    transform: rotate(-135deg);
+    top: 0;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+}
+
+// Section - 1 (Intro)
+
+.section-intro {
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro {
+  width: 64%;
+
+  &__img-container {
+    width: 100%;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__desc-container {
+    width: 100%;
+    display: flex;
+    padding-top: 3rem;
+    justify-content: space-between;
+    align-items: center;
+
+    & > h1:first-child {
+      width: 45%;
+    }
+  }
+
+  &__desc {
+    width: 50%;
+
+    & > p:first-child {
+      margin-bottom: 3.5rem;
+    }
+  }
+}
+
+.new {
+  width: 33%;
+  padding: 2.5rem 3rem;
+  background-color: $color-darker-grayish-blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__news {
+    padding: 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-dark-grayish-blue;
+    }
+  }
+}
+
+// Section - 2 (Articles)
+
+.section-article {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 3rem;
+}
+
+.article {
+  &-container {
+    width: 31%;
+    display: flex;
+  }
+
+  &__thumbnail {
+    width: 10rem;
+    object-fit: cover;
+  }
+
+  &__desc {
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+  }
+
+  &__number {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: $color-grayish-blue;
+  }
+}
+
+.footer {
+  width: 100%;
+  margin-top: 6rem;
+
+  &__note {
+    color: $color-dark-grayish-blue;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      color: $color-darker-grayish-blue;
+      transition: all 0.3s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary-red;
+    }
+  }
+}

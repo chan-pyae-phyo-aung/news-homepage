@@ -1,0 +1,59 @@
+.heading {
+  &--primary {
+    display: inline-block;
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 1.1;
+  }
+
+  &--secondary {
+    font-size: 3.5rem;
+    font-size: 700;
+  }
+
+  &--orange {
+    color: $color-primary-orange;
+  }
+
+  &--white {
+    &,
+    &:link,
+    &:visited {
+      color: $color-white;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary-orange;
+    }
+  }
+
+  &--black {
+    &,
+    &:link,
+    &:visited {
+      color: $color-darker-grayish-blue;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary-red;
+    }
+  }
+
+  &--tertiary {
+    font-size: 1.7rem;
+    font-weight: 900;
+  }
+}
+
+.paragraph {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: $color-dark-grayish-blue;
+  line-height: 1.5;
+
+  &--white {
+    color: $color-grayish-blue;
+  }
+}
