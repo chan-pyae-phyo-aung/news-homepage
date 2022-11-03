@@ -181,7 +181,7 @@
 }
 
 .intro {
-  width: 64%;
+  width: 66%;
 
   @include respond("tab-port") {
     width: 100%;
@@ -232,7 +232,7 @@
 }
 
 .new {
-  width: 33%;
+  width: 31%;
   padding: 2.5rem 3rem;
   background-color: $color-darker-grayish-blue;
   display: flex;

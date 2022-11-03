@@ -41,7 +41,7 @@ a {
 }
 
 .main {
-  max-width: 100rem;
+  max-width: 110rem;
   margin: 5rem 3rem;
 
   @include respond("tab-port") {
