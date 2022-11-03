@@ -37,7 +37,7 @@ a, a:link, a:visited {
 }
 
 .main {
-  max-width: 110rem;
+  max-width: 100rem;
   margin: 5rem 3rem;
 }
 @media only screen and (max-width: 56.25em) {
@@ -395,10 +395,11 @@ section {
 
 .btn, .btn:link, .btn:visited {
   display: inline-block;
-  padding: 1rem 2.5rem;
+  padding: 1.5rem 2.5rem;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 1.5rem;
+  font-weight: 700;
   letter-spacing: 2.5px;
   cursor: pointer;
   transition: all 0.3s;
