@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [My Solution](https://github.com/chanpyaephyoaung/news-homepage)
+- Solution URL: [My Solution](https://www.frontendmentor.io/solutions/responsive-landing-page-using-css-scss-and-vanilla-js-18QA7CBmDz)
 - Live Site URL: [Live Site](https://chanpyaephyoaung.github.io/news-homepage/)
 
 ## My process
